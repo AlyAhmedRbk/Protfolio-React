@@ -1,0 +1,141 @@
+@import "../../app.scss";
+
+.services{
+    height: 100%;
+    background: linear-gradient(180deg, #0c0c1d, #111132);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+    @include mobile{
+        margin-top: 20px;
+    }
+
+    .textContainer{
+        flex:1;
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include mobile{
+            align-self: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        p{
+            font-weight: 200;
+            font-size: 20px;
+            color: gray;
+            text-align: right;
+        }
+
+        hr{
+            width: 500px;
+            border: none;
+            border-top: 0.5px solid gray;
+
+            @include mobile{
+                width: 300px;
+            }
+        }
+    }
+
+    .titleContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 2;
+
+        .title{
+            display: flex;
+            gap: 50px;
+            align-items: center;
+
+            @include mobile{
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            img{
+                width: 300px;
+                height: 100px;
+                border-radius: 50px;
+                object-fit: cover;
+
+                @include mobile{
+                    margin-top: 10px;
+                    width: 100px;
+                    align-self: center;
+                    text-align: center;
+                    flex-direction: column;
+                }
+            }
+
+            h1{
+                font-size: 86px;
+                font-weight: 100;
+
+                @include mobile{
+                    font-weight: 100;
+                    font-size: 30px;
+                }
+            }
+
+            button{
+                width: 200px;
+                height: 80px;
+                border-radius: 50px;
+                background-color: orange;
+                border: none;
+                font-size: 16px;
+                cursor: pointer;
+
+                @include mobile{
+                    width: 200px;
+                    height: 40px;
+                    margin-bottom: 20px;
+                }
+
+            }
+        }
+    }
+
+    .listContainer{
+        display: flex;
+        flex: 2;
+        max-width: 1366px;
+        margin: auto;
+
+        @include mobile{
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .box{
+            padding: 50px;
+            border: 0.5px solid gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+
+            button{
+                padding: 10px;
+                border: none;
+                cursor: pointer;
+                background-color: orange;
+            }
+        }
+
+        .box:hover{
+            background-color: lightgray;
+            color: black;
+        }
+    }
+}

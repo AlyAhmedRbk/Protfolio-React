@@ -1,0 +1,105 @@
+@import "../../app.scss";
+
+.protfolio{
+    position: relative;
+    
+
+    .progress{
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 50px;
+        text-align: center;
+        color: orange;
+        font-size: 36px;
+
+        @include mobile{
+            font-size: 16px;
+            padding-top: calc(100vh - 100px);
+        }
+
+        .progressBar{
+            height: 10px;
+            background-color: #fff;
+        }
+    }
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        overflow: hidden;
+        
+        .wrapper{
+            max-width: 1366px;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+
+            @include mobile {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+
+
+            .imageContainer{
+                flex: 1;
+                height: 50%;
+
+                .image{
+                    object-fit: cover;
+                    width: 100%;
+
+                    
+                }
+            }
+    
+            .textContainer{
+                flex: 1px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                @include mobile{
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                h2{
+                    font-size: 72px;
+
+                    @include mobile{
+                        font-size: 52px;
+                    }
+                }
+
+                p{
+                    color: gray;
+                    font-size: 20px;
+
+                    @include mobile{
+                        font-size: 16px;
+                        width: 100%;
+                        text-align: center;
+                        margin: 0 50px;
+                    }
+                }
+
+                button{
+                    background-color: orange;
+                    border: none;
+                    border-radius: 10px;
+                    padding: 10px;
+                    width: 200px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
